@@ -35,7 +35,8 @@
   @include transition(fill, null, null, $time-duration, $time-transition);
 }
 
-.form__input:focus + .form--icon {
+.form__input:focus + .form--icon,
+.form__input:hover + .form--icon {
   fill: $active-element-color;
 }
 
