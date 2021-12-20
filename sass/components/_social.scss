@@ -1,0 +1,39 @@
+.soc {
+  @include flex(flex, null, null, null, null);
+}
+
+.soc__link {
+  @include flex(flex, center, center, null, null);
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  color: $soc-inactive-color;
+
+  @include transition(
+    background-color,
+    color,
+    null,
+    $time-duration,
+    $time-transition
+  );
+
+  &:hover,
+  &:focus {
+    background-color: $active-element-color;
+    color: $basic-color;
+    outline: none;
+  }
+  &--footer {
+    color: $basic-color;
+  }
+}
+.soc__item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}

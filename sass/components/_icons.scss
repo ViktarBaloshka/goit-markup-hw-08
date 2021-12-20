@@ -1,0 +1,64 @@
+.clients--icon {
+  @include icons(106px, 60px, currentColor);
+}
+
+.header-contacts--icon {
+  padding: 0;
+  margin-right: 10px;
+  @include icons(null, null, currentColor);
+}
+
+.soc--icon {
+  @include icons(20px, 20px, currentColor);
+}
+
+.thumb--icon {
+  @include flex(block, null, null, null, null);
+  margin: 0 auto;
+
+  @include icons(70px, 70px, null);
+}
+
+.button--icon {
+  @include icons(24px, 24px, $basic-color);
+}
+
+.close--icon {
+  @include icons(18px, 18px, currentColor);
+}
+
+.form--icon {
+  position: absolute;
+  transform: translate(12px, 28px);
+
+  @include icons(18px, 18px, null);
+  @include transition(fill, null, null, $time-duration, $time-transition);
+}
+
+.form__input:focus + .form--icon {
+  fill: $active-element-color;
+}
+
+.checkbox__input:checked + .checkbox--icon {
+  border-color: $active-element-color;
+  background-color: $active-element-color;
+  background-size: contain;
+  background-origin: border-box;
+}
+.checkbox--icon {
+  @include flex(null, null, center, null, null);
+  @include icons(16px, 15px, null);
+  @include border_style(null, null, 2px, 2px solid $first-fonts-color);
+  @include transition(
+    background-color,
+    color,
+    null,
+    $time-duration,
+    $time-transition
+  );
+}
+
+.checkbox__input:focus + .checkbox--icon,
+.checkbox__input:hover + .checkbox--icon {
+  border-color: $active-element-color;
+}

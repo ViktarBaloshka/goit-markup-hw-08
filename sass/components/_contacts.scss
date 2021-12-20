@@ -1,0 +1,33 @@
+.header-contacts__link {
+  @include flex(flex, null, center null, null, null);
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include font_style(500, 14px, 1.14, normal, 0.02em);
+
+  color: $second-fonts-color;
+  @include transition(color, null, null, $time-duration, $time-transition);
+  // transition: color, null, null, $time-duration $time-transition;
+
+  &:hover,
+  &:focus {
+    color: $active-element-color;
+    outline: none;
+  }
+}
+
+.footer-contacts__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  @include font_style(400, 14px, 1.71, normal, 0.02em);
+
+  &:hover,
+  &:focus {
+    color: $active-element-color;
+    outline: none;
+  }
+}
+
+.footer-contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}

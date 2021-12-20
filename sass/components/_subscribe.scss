@@ -1,0 +1,31 @@
+.form-subscribe {
+  display: flex;
+}
+.subscribe__text {
+  margin: 0 0 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $basic-color;
+}
+
+.subscribe__input {
+  display: block;
+  width: 358px;
+  margin-right: 12px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline-style: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.3);
+
+  &::placeholder {
+    @include font_style(400, 16px, 1.25, null, 0.03em);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

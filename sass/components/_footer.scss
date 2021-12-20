@@ -1,0 +1,29 @@
+.footer {
+  padding: 60px 0;
+  background-color: $hero-color;
+}
+
+.footer-soc {
+  margin-right: auto;
+}
+
+.footer-soc__text {
+  margin: 0 0 20px;
+  @include font_style(700, 14px, 1.14, null, 0.03em);
+
+  text-transform: uppercase;
+
+  color: $basic-color;
+}
+
+.footer__address {
+  margin-right: 70px;
+}
+
+.address__text {
+  margin: 0 0 9px;
+  font-style: normal;
+  @include font_style(null, 14px, 1.71, null, 0.03em);
+
+  color: $basic-color;
+}

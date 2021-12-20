@@ -1,0 +1,39 @@
+.specificity__list {
+  display: flex;
+}
+
+.specificity__header {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  @include font_style(700, 14px, 1.14, null, 0.02em);
+  text-transform: uppercase;
+}
+
+.specificity__text {
+  margin: 0;
+
+  @include font_style(null, 14px, 1.71, null, 0.02em);
+
+  color: $second-fonts-color;
+  max-width: 270px;
+}
+
+.specificity__item {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.specificity__thumb {
+  @include flex(flex, null, center, null, null);
+
+  width: 100%;
+  min-height: 120px;
+  margin-bottom: 30px;
+
+  @include border_style($second-color, null, 4px, null);
+}

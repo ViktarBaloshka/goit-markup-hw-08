@@ -1,0 +1,12 @@
+.filter__list {
+  @include flex(flex, center, null, null, null);
+  margin-bottom: 50px;
+}
+
+.filter__item {
+  margin-right: 0;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}

@@ -1,0 +1,38 @@
+.clients__header {
+  margin-top: 0;
+  margin-bottom: 50px;
+  @include font_style(700, 36px, 1.16, null, 0.03em);
+
+  text-align: center;
+}
+
+.clients__list {
+  @include flex(flex, center, null, null, null);
+}
+
+.clients__link {
+  @include flex(flex, center, center, null, null);
+  width: 170px;
+  height: 92px;
+
+  @include border_style(null, null, 4px, 1px solid $soc-inactive-color);
+  color: $soc-inactive-color;
+
+  @include transition(
+    border-color,
+    color,
+    null,
+    $time-transition,
+    $time-transition
+  );
+  &:hover,
+  &:focus {
+    color: $active-element-color;
+    @include border_style(null, null, null, 1px solid $active-element-color);
+    outline: none;
+  }
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 30px;
+}

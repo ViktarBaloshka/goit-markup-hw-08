@@ -1,0 +1,95 @@
+.hero__button {
+  padding: 10px 32px;
+  cursor: pointer;
+
+  @include font_style(700, 16px, 1.87, null, null);
+  font-family: inherit;
+
+  border: none;
+  border-radius: 4px;
+  background-color: $active-element-color;
+  color: $basic-color;
+
+  @include transition(
+    background-color,
+    color,
+    box-shadow,
+    $time-duration,
+    $time-transition
+  );
+
+  &:hover,
+  &:focus {
+    background: $active-hero-button-color;
+    box-shadow: 0px 4px 4px $shadow;
+    border-radius: 4px;
+    outline: none;
+  }
+}
+
+.subscribe__button,
+.submit__button {
+  @include flex(flex, center, center, null, null);
+
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+
+  @include font_style(700, 16px, 1.87, null, null);
+  color: $basic-color;
+  cursor: pointer;
+
+  @include border_style($active-element-color, 0px 4px 4px $shadow, 4px, none);
+
+  @include transition(
+    background-color,
+    color,
+    box-shadow,
+    $time-duration,
+    $time-transition
+  );
+
+  &:hover,
+  &:focus {
+    background: $active-hero-button-color;
+    @include border_style(null, 0px 4px 4px $shadow, 4px, null);
+    outline: none;
+  }
+}
+
+.subscribe__button {
+  justify-content: space-between;
+}
+
+.filter__button {
+  @include border_style(null, null, 4px, 0);
+
+  padding: 6px 22px;
+
+  @include font_style(500, 16px, 1.62, null, 0.03em);
+  font-family: inherit;
+  text-align: center;
+
+  color: $first-fonts-color;
+  cursor: pointer;
+
+  @include transition(
+    background-color,
+    color,
+    box-shadow,
+    $time-duration,
+    $time-transition
+  );
+
+  &:hover,
+  &:focus,
+  &--active {
+    background-color: $active-element-color;
+    color: $basic-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    outline: none;
+  }
+}

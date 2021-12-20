@@ -1,0 +1,30 @@
+.header-link__logo,
+.footer-link__logo {
+  font-family: $logo-font;
+
+  @include font_style(700, 26px, 1.19, null, 0.03em);
+
+  color: $first-fonts-color;
+
+  &:focus,
+  &:hover {
+    color: $active-element-color;
+    outline: none;
+  }
+}
+
+.logo--color-blue {
+  color: $active-element-color;
+}
+
+.header-link__logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.footer-link__logo {
+  display: block;
+  margin-bottom: 20px;
+  color: $basic-color;
+}
