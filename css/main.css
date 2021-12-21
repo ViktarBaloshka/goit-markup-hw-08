@@ -334,7 +334,7 @@ body {
 .hero {
   max-width: 1600px;
   height: 600px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero_img.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero_desktop.jpg");
   margin-right: auto;
   margin-left: auto;
   background-repeat: no-repeat;
