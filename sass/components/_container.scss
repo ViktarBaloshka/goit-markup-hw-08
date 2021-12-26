@@ -1,8 +1,16 @@
 .container {
-  width: 1200px;
+  width: 200px;
   padding: 0 15px;
   margin: 0 auto;
 
+  .hero & {
+    max-width: 360px;
+    padding: 0;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      max-width: 696px;
+    }
+  }
   .header & {
     display: flex;
   }
@@ -10,6 +18,18 @@
   .footer & {
     display: flex;
     align-items: baseline;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
   }
 }
 
