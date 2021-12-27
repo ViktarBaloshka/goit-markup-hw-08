@@ -1,39 +1,49 @@
 .specificity__list {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    @include flex(flex, null, null, null, wrap);
+    margin: -15px;
+  }
 }
 
 .specificity__header {
-  margin-top: 0;
-  margin-bottom: 10px;
-
-  @include font_style(700, 14px, 1.14, null, 0.02em);
+  margin: 0 0 10px 0;
+  @include font-style(null, 14px, 1.14, null, 0.03em);
   text-transform: uppercase;
+  color: $first-fonts-color;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .specificity__text {
   margin: 0;
-
-  @include font_style(null, 14px, 1.71, null, 0.02em);
-
+  @include font_style(null, 14px, 1.71, null, 0.03em);
   color: $second-fonts-color;
-  max-width: 270px;
 }
 
 .specificity__item {
-  width: calc((100% - 90px) / 4);
-  margin-right: 30px;
+  @media screen and (max-width: 767px) {
+    text-align: left;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
-  &:nth-child(4n) {
-    margin-right: 0;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
   }
 }
 
 .specificity__thumb {
-  @include flex(flex, null, center, null, null);
-
+  @include flex(flex, center, center, null, null);
   width: 100%;
   min-height: 120px;
-  margin-bottom: 30px;
 
+  margin-bottom: 30px;
   @include border_style($second-color, null, 4px, null);
 }
