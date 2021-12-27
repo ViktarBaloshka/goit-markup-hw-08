@@ -323,7 +323,7 @@ body {
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 450px;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -343,7 +343,14 @@ body {
 }
 
 .section {
-  padding: 94px 0 94px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .hero__title {
@@ -605,7 +612,7 @@ body {
 .make {
   padding-top: 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .make {
     display: none;
   }
@@ -737,6 +744,11 @@ body {
 .soc {
   display: flex;
 }
+@media screen and (max-width: 1199px) {
+  .soc {
+    justify-content: center;
+  }
+}
 
 .soc__link {
   display: flex;
@@ -768,18 +780,23 @@ body {
 }
 
 .clients__header {
-  margin-top: 0;
-  margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
+}
+@media screen and (max-width: 1199px) {
+  .clients__header {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
 }
 
 .clients__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .clients__link {
@@ -801,8 +818,19 @@ body {
   outline: none;
 }
 
-.clients__item:not(:last-child) {
-  margin-right: 30px;
+.clients__item {
+  width: calc(100% / 2 - 30px);
+  margin: 15px;
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc(100% / 3 - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc(100% / 6 - 30px);
+  }
 }
 
 .footer {
@@ -835,6 +863,24 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+.footer__mobile {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__mobile {
+    text-align: left;
+    margin-bottom: 0;
+    margin-right: auto;
+  }
 }
 
 .form-subscribe {
