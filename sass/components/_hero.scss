@@ -1,28 +1,75 @@
 .hero__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  max-width: 360px;
   margin: 0 auto 30px;
-  max-width: 696px;
-  @include font_style(900, 44px, 1.36, null, 0.06em);
+  text-align: center;
+  @include font_style(900, 26px, 1.62, null, 0.06em);
   text-transform: uppercase;
+  color: $basic-color;
+
+  @media screen and (min-width: 1200px) {
+    @include font_style(900, 44px, 1.36, null, 0.06em);
+    margin: 0 auto 30px;
+    max-width: 696px;
+  }
 }
 
 .hero {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  min-height: 400px;
+  margin: 0 auto;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../images/hero_img.jpg');
-  margin-right: auto;
-  margin-left: auto;
+    url('../images/hero_mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
   background-color: $hero-color;
-  color: $basic-color;
   text-align: center;
-  padding: 200px 0;
+  padding: 118px 0;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/hero_mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: 481px) {
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero_tablet.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero_tablet@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    max-width: 1600px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero_desktop.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero_desktop@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-height: 600px;
+  }
 }
 
 .hero__button {

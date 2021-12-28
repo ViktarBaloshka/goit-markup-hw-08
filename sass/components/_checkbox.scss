@@ -7,15 +7,20 @@
 
 .checkbox__name {
   margin-left: 8px;
-
-  @include font_style(400, 14px, 1.71, null, 0.03em);
+  @include font_style(400, 12px, 1.16, null, 0.03em);
 
   color: $second-fonts-color;
+  @media screen and (min-width: 1200px) {
+    @include font_style(400, 14px, 1.71, null, 0.03em);
+  }
 }
 
 .checkbox__link {
-  @include font_style(400, 14px, 1.71, null, 0.03em);
+  @include font_style(400, 12px, 1.16, null, 0.03em);
 
+  @media screen and (min-width: 1200px) {
+    @include font_style(400, 14px, 1.71, null, 0.03em);
+  }
   text-decoration-line: underline;
   text-decoration-skip-ink: none;
 
