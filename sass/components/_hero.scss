@@ -1,68 +1,50 @@
 .hero__title {
-  margin-top: 0;
-  margin-bottom: 30px;
-
-  @include font_style(900, 26px, 1.62, null, 0.06em);
+  margin: 0 auto 30px;
+  max-width: 696px;
+  @include font_style(900, 44px, 1.36, null, 0.06em);
   text-transform: uppercase;
-  color: $basic-color;
-
-  @media screen and (min-width: 1200px) {
-    @include font_style(900, 44px, 1.36, null, 0.06em);
-  }
 }
 
 .hero {
-  max-width: 480px;
-  min-height: 400px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 1600px;
+  height: 600px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../images/hero_mobile.jpg');
+    url('../images/hero_img.jpg');
+  margin-right: auto;
+  margin-left: auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
   background-color: $hero-color;
+  color: $basic-color;
+  text-align: center;
+  padding: 200px 0;
+}
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/hero_mobile@2x.jpg');
-  }
+.hero__button {
+  padding: 10px 32px;
+  cursor: pointer;
+  @include font_style(700, 16px, 1.87, null, null);
+  font-family: inherit;
 
-  @media screen and (min-width: 481px) {
-    max-width: 768px;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url('../images/hero_tablet.jpg');
+  @include border_style($active-element-color, null, 4px, none);
+  color: $basic-color;
+  @include transition(
+    background-color,
+    color,
+    box-shadow,
+    $time-duration,
+    $time-transition
+  );
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/hero_tablet@2x.jpg');
-    }
-  }
-
-  @media screen and (min-width: 769px) {
-    max-width: 1600px;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url('../images/hero_desktop.jpg');
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/hero_desktop@2x.jpg');
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-height: 600px;
+  &:hover,
+  &:focus {
+    background: $active-hero-button-color;
+    box-shadow: 0px 4px 4px $shadow;
+    border-radius: 4px;
   }
 }

@@ -6,20 +6,24 @@
 }
 
 .specificity__header {
-  margin: 0 0 10px 0;
-  @include font-style(null, 14px, 1.14, null, 0.03em);
-  text-transform: uppercase;
-  color: $first-fonts-color;
+  margin-top: 0;
+  margin-bottom: 10px;
 
-  @media screen and (max-width: 767px) {
-    text-align: center;
+  @include font_style(700, 14px, 1.14, null, 0.03em);
+  text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
   }
 }
 
 .specificity__text {
   margin: 0;
+
   @include font_style(null, 14px, 1.71, null, 0.03em);
+
   color: $second-fonts-color;
+  width: 100%;
 }
 
 .specificity__item {
@@ -29,7 +33,6 @@
       margin-bottom: 30px;
     }
   }
-
   @media screen and (min-width: 768px) {
     flex-basis: calc(100% / 2 - 30px);
     margin: 15px;
@@ -40,10 +43,11 @@
 }
 
 .specificity__thumb {
-  @include flex(flex, center, center, null, null);
+  @include flex(flex, null, center, null, null);
+
   width: 100%;
   min-height: 120px;
-
   margin-bottom: 30px;
+
   @include border_style($second-color, null, 4px, null);
 }

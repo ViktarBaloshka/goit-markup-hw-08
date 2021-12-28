@@ -27,7 +27,7 @@
 
 .make__text {
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
   left: 0;
 
   @include flex(flex, center, center, null, null);

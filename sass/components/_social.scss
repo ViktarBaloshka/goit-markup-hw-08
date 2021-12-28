@@ -1,8 +1,5 @@
 .soc {
-  @include flex(flex, null, null, null, null);
-  @media screen and (max-width: 1199px) {
-    justify-content: center;
-  }
+  @include flex(flex, center, null, null, null);
 }
 
 .soc__link {

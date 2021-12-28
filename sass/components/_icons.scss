@@ -35,8 +35,7 @@
   @include transition(fill, null, null, $time-duration, $time-transition);
 }
 
-.form__input:focus + .form--icon,
-.form__input:hover + .form--icon {
+.form__input:focus + .form--icon {
   fill: $active-element-color;
 }
 
@@ -62,9 +61,4 @@
 .checkbox__input:focus + .checkbox--icon,
 .checkbox__input:hover + .checkbox--icon {
   border-color: $active-element-color;
-}
-
-.icon__menu {
-  width: 40px;
-  height: 40px;
 }
