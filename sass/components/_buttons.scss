@@ -73,6 +73,7 @@
   text-align: center;
 
   color: $first-fonts-color;
+  background-color: $second-color;
   cursor: pointer;
 
   @include transition(
