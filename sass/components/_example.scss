@@ -8,7 +8,6 @@
 .example__item {
   margin-bottom: 30px;
   background: $basic-color;
-  max-width: 370px;
 
   @media screen and (min-width: 768px) {
     flex-basis: calc(100% / 2 - 30px);
@@ -17,9 +16,7 @@
 
   @media screen and (min-width: 1200px) {
     flex-basis: calc(100% / 3 - 30px);
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
+    margin: 15px;
   }
 
   & .example__content {
@@ -28,10 +25,14 @@
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
+    flex-grow: 1;
   }
 }
 
 .example__link {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   @include transition(box-shadow, null, null, $time-duration, $time-transition);
   &:hover,
   &:focus {
@@ -71,7 +72,7 @@
 
 .example__thumb {
   position: relative;
-  height: 294px;
+  height: auto;
   overflow: hidden;
   @include transition(
     transform,
@@ -106,6 +107,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 
   transform: translateY(100%);
   @include transition(transform, null, null, $time-duration, $time-transition);
