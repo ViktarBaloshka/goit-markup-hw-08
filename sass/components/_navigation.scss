@@ -1,13 +1,17 @@
 .navigation {
-  @include flex(flex, null, center, null, null);
-  margin-right: auto;
+  // @include flex(flex, null, center, null, null);
+  // margin-right: auto;
+  @media screen and (min-width: 768px) {
+    @include flex(flex, null, center, null, null);
+    margin-right: auto;
+  }
 
   @include font_style(500, 14px, 1.14, null, 0.02em);
 }
 
-.navigation__header {
-  display: flex;
-}
+// .navigation__header {
+//   display: flex;
+// }
 
 .navigation__header-item:not(:last-child) {
   margin-right: 50px;

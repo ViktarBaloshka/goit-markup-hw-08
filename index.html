@@ -16,23 +16,24 @@
 <body>
     <header class="header line">
         <div class="container">
-            <div class="menu-mobile__wrap">
+            <div class="mobile-wrap">
                 <a lang="en" class="header-link__logo link" href="./">
                     <span class="logo--color-blue">Web</span>Studio
                 </a>
-                <button class="button__menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <button class="button__menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="menu__icon">
                         <use href="./images/icons.svg#mobile-menu"></use>
                     </svg>
                 </button>
             </div>
+
             <div class="menu-container js-menu-container" id="mobile-menu">
-                <button class="button__menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <button class="button__menu-toggle js-close-menu">
                     <svg class="menu__icon">
                         <use href="./images/icons.svg#mobile-menu-close"></use>
                     </svg>
                 </button>
-                <div class="menu-mobile__wrap">
+                <div class="mobile-wrap">
                     <nav class="navigation">
                         <ul class="navigation__header list">
                             <li class="navigation__header-item">
@@ -47,7 +48,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="mobile-thumb">
+                    <div class="navigation-contacts">
                         <ul class="list navigation__header">
                             <li class="navigation__header-item">
                                 <a class="header-contacts__link link" href="mailto:info@devstudio.com">
@@ -62,25 +63,26 @@
                                     </svg>+38 096 111 11 11</a>
                             </li>
                         </ul>
-                        <ul class="list social__menu">
-                            <li class="social__menu-item">
+                        <ul class="list soc__menu">
+                            <li class="soc__menu-item">
                                 <a href="" class="soc-menu__link link">Instagram</a>
                             </li>
-                            <li class="social__menu-item">
+                            <li class="soc__menu-item">
                                 <a href="" class="soc-menu__link link">Twitter</a>
                             </li>
-                            <li class="social__menu-item">
+                            <li class="soc__menu-item">
                                 <a href="" class="soc-menu__link link">Facebook</a>
                             </li>
-                            <li class="social__menu-item">
+                            <li class="soc__menu-item">
                                 <a href="" class="soc-menu__link link">LinkedIn</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-
             </div>
+            <!--  -->
 
+            <!--  -->
         </div>
     </header>
 
@@ -530,7 +532,7 @@
             </form>
         </div>
     </div>
-
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 

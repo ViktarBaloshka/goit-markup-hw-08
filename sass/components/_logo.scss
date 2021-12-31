@@ -2,9 +2,13 @@
 .footer-link__logo {
   font-family: $logo-font;
 
-  @include font_style(700, 26px, 1.19, null, 0.03em);
+  @include font_style(700, 24px, 1.16, null, 0.03em);
 
   color: $first-fonts-color;
+
+  @media screen and (min-width: 1200px) {
+    @include font_style(700, 26px, 1.19, null, 0.03em);
+  }
 
   &:focus,
   &:hover {
@@ -18,9 +22,14 @@
 }
 
 .header-link__logo {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 93px;
+  }
 }
 
 .footer-link__logo {
