@@ -63,3 +63,9 @@
 .checkbox__input:hover + .checkbox--icon {
   border-color: $active-element-color;
 }
+
+.menu__icon {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
