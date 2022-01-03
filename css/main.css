@@ -322,11 +322,12 @@ body {
     width: 1200px;
   }
 }
-.footer .container {
-  display: flex;
-  align-items: baseline;
-}
 
+@media screen and (min-width: 1200px) {
+  .footer {
+    display: flex;
+  }
+}
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -973,8 +974,25 @@ body {
   background-color: #2f303a;
 }
 
-.footer-soc {
-  margin-right: auto;
+.footer-mobile {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-mobile {
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-mobile {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-mobile {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
 }
 
 .footer-soc__text {
@@ -987,8 +1005,24 @@ body {
   color: #ffffff;
 }
 
-.footer__address {
-  margin-right: 70px;
+@media screen and (max-width: 767px) {
+  .footer__address:first-of-type {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__address.footer-soc {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__address {
+    margin-right: 97px;
+    text-align: left;
+  }
+  .footer__address.footer-soc {
+    margin-right: 0;
+  }
 }
 
 .address__text {
@@ -1000,8 +1034,18 @@ body {
   color: #ffffff;
 }
 
-.form-subscribe {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .form-subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .form-subscribe {
+    margin: 0 auto;
+    max-width: 450px;
+  }
 }
 
 .subscribe__text {
@@ -1011,19 +1055,31 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: left;
   color: #ffffff;
+}
+@media screen and (max-width: 1200px) {
+  .subscribe__text {
+    text-align: center;
+  }
 }
 
 .subscribe__input {
   display: block;
-  width: 358px;
-  margin-right: 12px;
+  width: 450px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   outline-style: none;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 .subscribe__input::-moz-placeholder {
   font-weight: 400;
