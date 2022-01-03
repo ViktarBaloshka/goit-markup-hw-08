@@ -6,6 +6,9 @@
   padding: 0;
   margin-right: 10px;
   @include icons(null, null, currentColor);
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .soc--icon {

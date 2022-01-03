@@ -1,18 +1,24 @@
 .header-contacts__link {
-  @include flex(flex, null, center null, null, null);
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  @include font_style(500, 14px, 1.14, normal, 0.02em);
-
+  @include font_style(500, 34px, 1.17, normal, 0.02em);
+  padding: 16px 16px;
+  display: block;
   color: $second-fonts-color;
-  @include transition(color, null, null, $time-duration, $time-transition);
-  // transition: color, null, null, $time-duration $time-transition;
 
-  &:hover,
-  &:focus {
-    color: $active-element-color;
-    outline: none;
+  @media screen and (min-width: 768px) {
+    @include flex(flex, null, center null, null, null);
+    @include transition(color, null, null, $time-duration, $time-transition);
+    @include font_style(500, 12px, 1.16, normal, 0.02em);
+
+    &:hover,
+    &:focus {
+      color: $active-element-color;
+      outline: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 

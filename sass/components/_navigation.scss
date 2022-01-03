@@ -1,31 +1,70 @@
+// .navigation {
+//   @media screen and (min-width: 768px) {
+//     @include font_style(500, 14px, 1.14, null, 0.02em);
+//     margin-right: auto;
+//   }
+// }
 .navigation {
-  // @include flex(flex, null, center, null, null);
-  // margin-right: auto;
   @media screen and (min-width: 768px) {
-    @include flex(flex, null, center, null, null);
-    margin-right: auto;
+    margin-right: 76px;
   }
-
-  @include font_style(500, 14px, 1.14, null, 0.02em);
+  @media screen and (min-width: 1200px) {
+    margin-right: 314px;
+  }
 }
 
-// .navigation__header {
-//   display: flex;
-// }
+.navigation__header {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
 
+.navigation__header-item {
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.navigation-contacts {
+  & .navigation__header {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 38px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    & .navigation__header {
+      flex-wrap: wrap;
+    }
+  }
+
+  & .soc-menu__link {
+    padding: 10px;
+    @include font_style(500, 18px, 1.22, null, 0.02em);
+    color: $active-element-color;
+  }
+}
+
+.navigation__header-item {
+  @media scree and (min-width: 768px) {
+    display: flex;
+  }
+}
 .navigation__header-item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
 }
 
 .navigation__header-link {
+  @include font_style(500, 40px, 1.17, null, 0.02em);
   position: relative;
-
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
+  padding: 25px 16px;
   color: $first-fonts-color;
-  @include transition(color, transform, null, $time-duration, $time-transition);
 
   &:hover,
   &:focus {
@@ -33,43 +72,57 @@
     outline: none;
   }
 
-  &:hover::after {
-    transform: scaleX(1);
-    @include transition(
-      color,
-      transform,
-      null,
-      $time-duration,
-      $time-transition
-    );
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 5px;
-
-    background-color: $active-element-color;
-    border-radius: 2px;
-    max-height: 4px;
-
-    transform: scaleX(0);
-    @include transition(
-      color,
-      transform,
-      null,
-      $time-duration,
-      $time-transition
-    );
-  }
-
   &--active {
     color: $active-element-color;
     &::after {
       transform: scaleX(1);
+      @include transition(
+        color,
+        transform,
+        null,
+        $time-duration,
+        $time-transition
+      );
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    // @include flex(flex, null, center, null, nowrap);
+    margin-right: o;
+    @include font_style(500, 14px, 1.14, null, 0.02em);
+    color: $first-fonts-color;
+    @include transition(
+      color,
+      transform,
+      null,
+      $time-duration,
+      $time-transition
+    );
+
+    &:hover::after {
+      transform: scaleX(1);
+      @include transition(
+        color,
+        transform,
+        null,
+        $time-duration,
+        $time-transition
+      );
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 5px;
+
+      background-color: $active-element-color;
+      border-radius: 2px;
+      max-height: 4px;
+
+      transform: scaleX(0);
       @include transition(
         color,
         transform,
