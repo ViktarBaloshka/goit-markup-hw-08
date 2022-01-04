@@ -41,7 +41,7 @@
 .soc__menu {
   display: flex;
   flex-wrap: nowrap;
-
+  padding-left: 10px;
   .soc__menu-item + .soc__menu-item::before {
     content: '';
     border-right: 1px solid rgba(33, 33, 33, 0.2);

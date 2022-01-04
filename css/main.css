@@ -322,12 +322,12 @@ body {
     width: 1200px;
   }
 }
-
 @media screen and (min-width: 1200px) {
-  .footer {
+  .footer .container {
     display: flex;
   }
 }
+
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -979,6 +979,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .footer-mobile {
+    display: flex;
     margin-right: auto;
   }
 }
@@ -1189,6 +1190,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 40px;
+  min-width: 40px;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -1689,6 +1692,7 @@ body {
 .soc__menu {
   display: flex;
   flex-wrap: nowrap;
+  padding-left: 10px;
 }
 .soc__menu .soc__menu-item + .soc__menu-item::before {
   content: "";
