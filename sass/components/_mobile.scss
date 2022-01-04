@@ -42,6 +42,7 @@
   display: flex;
   flex-wrap: nowrap;
   padding-left: 10px;
+  justify-content: flex-start;
   .soc__menu-item + .soc__menu-item::before {
     content: '';
     border-right: 1px solid rgba(33, 33, 33, 0.2);

@@ -1694,6 +1694,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   padding-left: 10px;
+  justify-content: flex-start;
 }
 .soc__menu .soc__menu-item + .soc__menu-item::before {
   content: "";
