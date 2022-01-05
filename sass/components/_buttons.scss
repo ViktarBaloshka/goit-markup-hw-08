@@ -23,7 +23,6 @@
     background: $active-hero-button-color;
     box-shadow: 0px 4px 4px $shadow;
     border-radius: 4px;
-    outline: none;
   }
 }
 
@@ -37,7 +36,7 @@
   margin-right: auto;
   padding: 10px 32px;
 
-  @include font_style(700, 16px, 1.87, null, null);
+  @include font_style(700, 16px, 1.87, null, 0.03em);
   color: $basic-color;
   cursor: pointer;
 
@@ -55,7 +54,6 @@
   &:focus {
     background: $active-hero-button-color;
     @include border_style(null, 0px 4px 4px $shadow, 4px, null);
-    outline: none;
   }
 }
 
@@ -91,7 +89,6 @@
     color: $basic-color;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
-    outline: none;
   }
 }
 
@@ -109,7 +106,6 @@
   border: none;
   border-radius: 50%;
   background-color: transparent;
-  outline: none;
 
   @media screen and (min-width: 768px) {
     display: none;

@@ -4,27 +4,21 @@
   display: flex;
   color: $second-fonts-color;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     @include flex(flex, null, center null, null, null);
     @include transition(color, null, null, $time-duration, $time-transition);
     @include font_style(500, 12px, 1.16, normal, 0.02em);
     padding: 0;
-    & .mail {
-      padding-top: 20px;
-    }
-    & .phone {
-      padding-bottom: 20px;
-    }
   }
 
-  @media screen and (min-width: 768px) and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
+
   &:hover,
   &:focus {
     color: $active-element-color;
-    outline: none;
   }
 }
 

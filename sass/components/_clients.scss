@@ -29,7 +29,7 @@
 
 .clients__link {
   @include flex(flex, center, center, null, null);
-  min-width: 170px;
+  // min-width: 170px;
   height: 92px;
 
   @include border_style(null, null, 4px, 1px solid $soc-inactive-color);
@@ -39,7 +39,7 @@
     border-color,
     color,
     null,
-    $time-transition,
+    $time-duration,
     $time-transition
   );
   &:hover,

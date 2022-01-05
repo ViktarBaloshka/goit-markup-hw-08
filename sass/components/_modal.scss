@@ -38,6 +38,8 @@
   transform: translate(-50%, -50%);
 
   padding: 40px;
+  width: 96%;
+  height: 96%;
 
   @media screen and (min-width: 480px) {
     width: 450px;
@@ -92,6 +94,9 @@
   margin: 0 0 12px;
   @include font_style(700, 20px, 1.5, null, 0.03em);
   text-align: center;
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    @include font_style(700, 19px, 1.5, null, 0.03em);
+  }
   @media screen and (min-width: 1200px) {
     @include font_style(700, 20px, 1.15, null, 0.03em);
   }
