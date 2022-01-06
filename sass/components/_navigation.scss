@@ -18,12 +18,6 @@
     &:not(:last-child) {
       margin-right: 50px;
     }
-    & .mail {
-      padding-top: 20px;
-    }
-    & .phone {
-      padding-bottom: 20px;
-    }
   }
 }
 
@@ -80,6 +74,7 @@
   &:hover,
   &:focus {
     color: $active-element-color;
+    outline: none;
   }
 
   &--active {

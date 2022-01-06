@@ -4,21 +4,38 @@
   display: flex;
   color: $second-fonts-color;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     @include flex(flex, null, center null, null, null);
     @include transition(color, null, null, $time-duration, $time-transition);
     @include font_style(500, 12px, 1.16, normal, 0.02em);
     padding: 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 480px) {
+    @include font_style(500, null, 1.17, normal, 0.02em);
+    font-size: 8vw;
+  }
+
+  &.phone {
+    @media screen and (min-width: 768px) and(max-width: 1199px) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &.mail {
+    @media screen and (min-width: 768px) and(max-width: 1199px) {
+      padding-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (min-width: 1200px) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-
   &:hover,
   &:focus {
     color: $active-element-color;
+    outline: none;
   }
 }
 
