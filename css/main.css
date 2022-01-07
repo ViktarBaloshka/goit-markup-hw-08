@@ -522,7 +522,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .navigation-contacts .navigation__header {
     margin-bottom: 38px;
     display: flex;
@@ -559,8 +559,9 @@ body {
   letter-spacing: 0.02em;
   position: relative;
   display: block;
-  padding: 25px 16px;
+  padding: 0 16px;
   color: #212121;
+  padding: 25px 16px;
 }
 .navigation__header-link:hover, .navigation__header-link:focus {
   color: #2196f3;
@@ -1226,7 +1227,7 @@ body {
   margin-right: 10px;
   fill: currentColor;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .header-contacts--icon {
     display: none;
   }
@@ -1666,7 +1667,7 @@ body {
 .mobile-wrap {
   display: flex;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .mobile-wrap {
     justify-content: space-between;
   }
@@ -1682,7 +1683,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .menu-container {
     position: fixed;
     top: 0;
@@ -1715,14 +1716,14 @@ body {
   content: "";
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
-@media screen and (min-width: 768px) {
-  .soc__menu {
-    display: none;
-  }
-}
 @media screen and (max-width: 480px) {
   .soc__menu {
     flex-wrap: wrap;
     padding-top: 5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .soc__menu {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

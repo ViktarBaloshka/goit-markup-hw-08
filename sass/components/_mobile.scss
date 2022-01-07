@@ -1,6 +1,6 @@
 .mobile-wrap {
   display: flex;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     justify-content: space-between;
     .menu-container & {
       flex-basis: 100%;
@@ -15,13 +15,14 @@
 }
 
 .menu-container {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     padding: 32px 15px;
+
     background-color: $basic-color;
     z-index: 999;
 
@@ -43,15 +44,18 @@
   flex-wrap: nowrap;
   padding-left: 10px;
   justify-content: flex-start;
+
   .soc__menu-item + .soc__menu-item::before {
     content: '';
     border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
+
   @media screen and (max-width: 480px) {
     flex-wrap: wrap;
     padding-top: 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
